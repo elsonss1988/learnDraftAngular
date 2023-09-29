@@ -1,0 +1,50 @@
+<h2>{{ "Hello " + nome + " Welcome to Angular World" }}</h2>
+
+<ng-content select="h1"></ng-content>
+
+<button (click)="alertaInfo('OK !!!')">Evento</button>
+
+<div class="container" (mousemove)="mouseTest($event)"></div>
+
+{{ position.x }} -{{ position.y }}
+
+<input [(ngModel)]="nome" (change)="getNome(nome)" />
+{{ nome }}
+
+<button
+  [ngStyle]="{ backgroundColor: colorButton, height: heightButton }"
+  (click)="salvar(nome)"
+>
+  Do Nothing
+</button>
+
+<ul>
+  <li *ngFor="let item of list; let i = index" (click)="onClickEventList(i)">
+    [{{ i }}] - {{ item.nome }} - idade = {{ item.idade }}
+  </li>
+</ul>
+
+<button (click)="onClickAddList()">Add</button>
+
+<div [ngSwitch]="nome">
+  <p *ngSwitchCase="'Elson'">Ola Elson</p>
+  <p *ngSwitchCase="'Elder'">Ola Elder</p>
+  <p *ngSwitchCase="'Elaine'">Ola Elaine</p>
+  <p *ngSwitchDefault>Ola meu Convidado</p>
+</div>
+
+<p *ngIf="condition; else guest">Voce tem acesso total ao sistema</p>
+
+<ng-template #guest>
+  <p>Peca ajuda a um admin</p>
+</ng-template>
+
+<p [ngClass]="{ on: valor, off: !valor }">Footer</p>
+
+<b>=============================================</b>
+
+<ng-template ngFor let-item [ngForOf]="list">
+  <p>
+    {{ item.nome }}
+  </p>
+</ng-template>
