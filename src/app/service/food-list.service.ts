@@ -63,6 +63,7 @@ export class FoodListService {
   // }
 
   public foodListAlert(value: FoodList) {
+    alert('heyhey');
     return this.emitEvent.emit(value);
   }
 }

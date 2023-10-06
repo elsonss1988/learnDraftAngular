@@ -8,9 +8,10 @@ import { ConteudoComponent } from './conteudo/conteudo.component';
 import { FooterComponent } from './footer/footer.component';
 import { SharedModule } from './shared/shared.module';
 import { OutputComponent } from './output/output.component';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
-  declarations: [AppComponent, ConteudoComponent, FooterComponent, OutputComponent],
+  declarations: [AppComponent, ConteudoComponent, FooterComponent, OutputComponent, FormsComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
